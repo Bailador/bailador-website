@@ -1,0 +1,16 @@
+body {
+     background-color: #F0FFFF;
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+#index-banner {
+    text-align: center;
+
+    background-image: url('../img/logo.png'), url('../img/camelia.png');
+    background-repeat: no-repeat;
+    background-position: left, right;
+}
