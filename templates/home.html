@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Bailador - A Perl 6 web application developement</title>
-  <link rel="icon" type="image/png" href="img/logo.png" />
-
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
-
-
-<body>
-
-    <header>
-
-        <nav>
-            <div class="nav-wrapper indigo">
-                <a href="#" class="brand-logo"><img src="img/logo.png" alt="Bailador Logo" style="width:70px"></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Ressources</a></li>
-                    <li><a href="#">News</a></li>
-                </ul>
-            </div>
-        </nav>
-
-    </header>
+% my (%h) = @_;
+% use Bailador;
+<%= template('header.html', %h); %>
 
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
@@ -83,19 +55,4 @@
     <br><br>
   </div>
 
-  <footer class="page-footer indigo">
-    <div class="footer-copyright">
-      <div class="container">
-      Join the Bailador team on Slack !</a>
-      </div>
-    </div>
-  </footer>
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
-  </body>
-</html>
+<%= template('footer.html', %h); %>
