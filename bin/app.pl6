@@ -7,7 +7,10 @@ get '/' => sub {
 }
 
 get '/documentation' => sub {
-    template 'documentation.html';
+    my $text = slurp 'templates/documentation-text.html';
+    template 'documentation.html', {
+        text => $text
+    };
 }
 
 require Bailador::Gradual;

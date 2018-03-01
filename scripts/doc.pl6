@@ -4,7 +4,7 @@ use LWP::Simple;
 
 my Str $DOC_URL = 'https://raw.githubusercontent.com/Bailador/Bailador/dev/doc/README.md';
 my Str $markdown-filename = 'documentation.md';
-my Str $html-filename = 'templates/documentation.html';
+my Str $html-filename = 'templates/documentation-text.html';
 my Str $markdown = LWP::Simple.get($DOC_URL);
 spurt $markdown-filename, $markdown;
 
