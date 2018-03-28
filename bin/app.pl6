@@ -2,11 +2,14 @@ use v6.c;
 
 use Bailador;
 
-get '/' => sub {
+use lib 'lib';
+use Routes;
+
+get %routes<home> => sub {
     template 'home.html';
 }
 
-get '/documentation' => sub {
+get %routes<documentation> => sub {
     my $text = slurp 'templates/documentation-text.html';
     template 'documentation.html', {
         text => $text
